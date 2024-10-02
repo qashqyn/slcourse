@@ -1,0 +1,53 @@
+@use './variables' as v;
+@import './adaptive';
+
+header{
+    height: 64px;
+    background: v.$green;
+    .content{
+        height: 100%;
+        padding: 0 16px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        .logo{
+            font-size: 24px;
+            color: v.$white;
+            font-weight: 500;
+        }
+        ul{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 24px;
+            li{
+                font-size: 16px;
+                line-height: 20px;
+                font-weight: 400;
+                color: v.$white;
+                .profile{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 8px;
+                    .avatar{
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
